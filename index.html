@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Welcome to Smart Ticket</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Smart Ticket</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <!--Tailwind CSS & Daisy UI CDN-->
     <link
@@ -12,55 +12,120 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="container mx-auto my-10">
-        <!-- Navbar -->
-        <div class="navbar bg-base-100">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </div>
-                <ul tabindex="0" class="menu menu-sm text-xl dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a>Home</a></li>
-                  <li><a>About</a></li>
-                  <li><a>Destination</a></li>
-                  <li><a>Search</a></li>
-                </ul>
-              </div>
-              <a class="btn btn-ghost text-3xl font-bold ">P-Ticket</a>
+      <!-- Navbar -->
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
             </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1 text-xl">
-                <li><a>Home</a></li>
-                <li><a>About</a></li>
-                <li><a>Destination</a></li>
-                <li><a>Search</a></li>
-              </ul>
-            </div>
-            <div class="navbar-end">
-              <a class="btn bg-[#f0fdef] border-[#1DD100] text-[#1DD100] font-bold text-xl flex flex-col justify-center items-center">Button <img src="assets/images/bus-icon.png" alt=""></a>
-            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm text-xl dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
           </div>
+          <a class="btn btn-ghost text-3xl font-bold">P-Ticket</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 text-xl">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a
+            class="btn bg-[#f0fdef] border-[#1DD100] text-[#1DD100] font-bold text-xl flex flex-col justify-center items-center"
+            >Bus <img src="assets/images/bus-icon.png" alt=""
+          /></a>
+        </div>
+      </div>
     </header>
     <main class="container mx-auto">
-        <!-- Banner Part Start -->
-        <section id="banner" class=" mx-auto mb-40 h-[700px] rounded-3xl">
-            <div class="items-center justify-center w-full h-full flex flex-col gap-5">
-                <h1 class="text-white text-7xl font-bold">End-to-End Travel with</h1>
-                <h1 class="text-[#1DD100] text-7xl font-bold">P Paribahan</h1>
-                <p class="text-white text-center">Yes, you can run unit tests and view the results directly within the app. <br> The integrated testing features allow for a streamlined .</p>
-                <button class="btn w-36 bg-[#1DD100] hover:bg-[#1DD100] p-4 border-none font-bold">Buy Tickets</button>
+      <!-- Banner Part Start -->
+      <section id="banner" class="mx-auto mb-20 h-[700px] rounded-3xl">
+        <div
+          class="items-center justify-center w-full h-full flex flex-col gap-5"
+        >
+          <h1 class="text-white text-7xl font-bold">End-to-End Travel with</h1>
+          <h1 class="text-[#1DD100] text-7xl font-bold">P Paribahan</h1>
+          <p class="text-white text-center">
+            Yes, you can run unit tests and view the results directly within the
+            app. <br />
+            The integrated testing features allow for a streamlined .
+          </p>
+          <button
+            class="btn w-36 bg-[#1DD100] hover:bg-[#1DD100] p-4 border-none font-bold"
+          >
+            Buy Tickets
+          </button>
+        </div>
+        <div>
+          <!-- Optional Div -->
+        </div>
+      </section>
+      <!-- Banner Part End -->
+      <!-- Best Offers Start -->
+      <section class="mx-auto mb-20 text-center">
+        <h2 class="text-4xl font-bold text-center mb-12">Best offers for you</h2>
+        <div class="cupon flex justify-center gap-8 ">
+          <!-- Cupon-1 -->
+          <div class="bg-[#FFBF0F] rounded-3xl flex">
+            <div class="p-14 text-left">
+              <h2 class="font-black text-4xl">15% OFF</h2>
+              <p class="font-semibold text-xl">on your next purchase</p>
+              <p class="font-medium text-lg">use by January 2024</p>
             </div>
-            <div>
-                <!-- Optional Div -->
+            <div><img src="assets/images/cupon-devider.png" alt=""></div>
+            <div class="p-14 text-center flex flex-col justify-center">
+              <h2 class="font-bold text-3xl">NEW15</h2>
+              <p class="font-medium text-lg">Coupon Code</p>
             </div>
-        </section>
-        <!-- Banner Part End -->
+          </div>
+          <!-- Cupon-2 -->
+          <div class="bg-[#F78C9C] rounded-3xl flex">
+            <div class="p-14 text-left">
+              <h2 class="font-black text-4xl">20% OFF</h2>
+              <p class="font-semibold text-xl">on your next purchase</p>
+              <p class="font-medium text-lg">use by January 2024</p>
+            </div>
+            <div><img src="assets/images/cupon-devider.png" alt=""></div>
+            <div class="p-14 text-center flex flex-col justify-center">
+              <h2 class="font-bold text-3xl">Couple 20</h2>
+              <p class="font-medium text-lg">Coupon Code</p>
+            </div>
+          </div>
+        </div>
+        <button class="btn bg-[#ffffff] border-[#1DD100] text-[#1DD100] font-bold text-xl mt-14 p-6 h-auto">See All Offers</button>
+      </section>
+      <!-- Best Offers End -->
+      <!-- Booking Section Start -->
+      
+      <!-- Booking Section End -->
     </main>
 
-
     <script src="assets/js/functions.js"></script>
-</body>
+  </body>
 </html>
