@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Welcome to Smart Ticket</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <!--Tailwind CSS & Daisy UI CDN-->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
@@ -14,24 +14,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header class="container mx-auto">
+    <header class="container mx-auto my-10">
+        <!-- Navbar -->
         <div class="navbar bg-base-100">
             <div class="navbar-start">
               <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <ul tabindex="0" class="menu menu-sm text-xl dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                   <li><a>Home</a></li>
                   <li><a>About</a></li>
                   <li><a>Destination</a></li>
                   <li><a>Search</a></li>
                 </ul>
               </div>
-              <a class="btn btn-ghost text-xl">P-Ticket</a>
+              <a class="btn btn-ghost text-3xl font-bold ">P-Ticket</a>
             </div>
             <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
+              <ul class="menu menu-horizontal px-1 text-xl">
                 <li><a>Home</a></li>
                 <li><a>About</a></li>
                 <li><a>Destination</a></li>
@@ -39,12 +40,27 @@
               </ul>
             </div>
             <div class="navbar-end">
-              <a class="btn">Button</a>
+              <a class="btn bg-[#f0fdef] border-[#1DD100] text-[#1DD100] font-bold text-xl flex flex-col justify-center items-center">Button <img src="assets/images/bus-icon.png" alt=""></a>
             </div>
           </div>
     </header>
+    <main class="container mx-auto">
+        <!-- Banner Part Start -->
+        <section id="banner" class=" mx-auto mb-40 h-[700px] rounded-3xl">
+            <div class="items-center justify-center w-full h-full flex flex-col gap-5">
+                <h1 class="text-white text-7xl font-bold">End-to-End Travel with</h1>
+                <h1 class="text-[#1DD100] text-7xl font-bold">P Paribahan</h1>
+                <p class="text-white text-center">Yes, you can run unit tests and view the results directly within the app. <br> The integrated testing features allow for a streamlined .</p>
+                <button class="btn w-36 bg-[#1DD100] hover:bg-[#1DD100] p-4 border-none font-bold">Buy Tickets</button>
+            </div>
+            <div>
+                <!-- Optional Div -->
+            </div>
+        </section>
+        <!-- Banner Part End -->
+    </main>
 
 
-    <script src="functions.js"></script>
+    <script src="assets/js/functions.js"></script>
 </body>
 </html>
