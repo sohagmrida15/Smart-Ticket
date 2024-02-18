@@ -18,7 +18,24 @@
     border-right: 3px dashed rgb(190, 190, 190);
 }
 
+#seatPlancol-2 > h2 {
+    
+    border-bottom: 1px dashed rgb(190, 190, 190);
+}
+
 #seatStatus{
     border-top: 2px dashed rgb(190, 190, 190) ;
+    border-bottom: 2px dashed rgb(190, 190, 190) ;
+}
+
+#bill{
+    border-bottom: 2px solid rgb(190, 190, 190) ; 
+}
+
+#bill-heading{
+    border-bottom: 2px dashed rgb(190, 190, 190) ;
+}
+
+#footer-row-1{
     border-bottom: 2px dashed rgb(190, 190, 190) ;
 }
