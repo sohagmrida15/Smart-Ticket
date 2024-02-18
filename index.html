@@ -59,7 +59,7 @@
           app. <br />
           The integrated testing features allow for a streamlined .
         </p>
-        <button class="btn w-36 bg-[#1DD100] hover:bg-[#1DD100] p-4 border-none font-bold">
+        <button id="buy-ticket-btn" class="btn w-36 bg-[#1DD100] hover:bg-[#1DD100] p-4 border-none font-bold">
           Buy Tickets
         </button>
       </div>
@@ -134,7 +134,7 @@
               </div>
               <div class="bg-[#1dd10026] text-[#1dd100] gap-2 items-center p-4 rounded-xl font-bold flex">
                 <img class="h-5" src="assets/images/seat-green.png" alt />
-                <p>40 Seats left</p>
+                <p><span id="total-seat">40</span> Seats left</p>
               </div>
             </div>
             <!-- Destination -->
@@ -193,18 +193,18 @@
               <div id="a" class="flex justify-between">
                 <div class="flex gap-3 justify-between">
                   <div class="py-4 px-5">A</div>
-                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                  <div id="a1" class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
                     A1
                   </div>
-                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                  <div id="a2" class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
                     A2
                   </div>
                 </div>
                 <div class="flex gap-3 justify-between">
-                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                  <div id="a3" class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
                     A3
                   </div>
-                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                  <div id="a4" class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
                     A4
                   </div>
                 </div>
@@ -212,18 +212,18 @@
               <div id="b" class="flex justify-between">
                 <div class="flex gap-3 justify-between">
                   <div class="py-4 px-5">B</div>
-                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                  <div id="b1" class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
                     B1
                   </div>
-                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                  <div id="b2" class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
                     B2
                   </div>
                 </div>
                 <div class="flex gap-3 justify-between">
-                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                  <div id="b3" class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
                     B3
                   </div>
-                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                  <div id="b4" class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
                     B4
                   </div>
                 </div>
@@ -285,6 +285,101 @@
                   </div>
                 </div>
               </div>
+              <div id="f" class="flex justify-between">
+                <div class="flex gap-3 justify-between">
+                  <div class="py-4 px-5">F</div>
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    F1
+                  </div>
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    F2
+                  </div>
+                </div>
+                <div class="flex gap-3 justify-between">
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    F3
+                  </div>
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    F4
+                  </div>
+                </div>
+              </div>
+              <div id="g" class="flex justify-between">
+                <div class="flex gap-3 justify-between">
+                  <div class="py-4 px-5">G</div>
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    G1
+                  </div>
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    G2
+                  </div>
+                </div>
+                <div class="flex gap-3 justify-between">
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    G3
+                  </div>
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    G4
+                  </div>
+                </div>
+              </div>
+              <div id="h" class="flex justify-between">
+                <div class="flex gap-3 justify-between">
+                  <div class="py-4 px-5">H</div>
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    H1
+                  </div>
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    H2
+                  </div>
+                </div>
+                <div class="flex gap-3 justify-between">
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    H3
+                  </div>
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    H4
+                  </div>
+                </div>
+              </div>
+              <div id="i" class="flex justify-between">
+                <div class="flex gap-3 justify-between">
+                  <div class="py-4 px-5">I</div>
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    I1
+                  </div>
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    I2
+                  </div>
+                </div>
+                <div class="flex gap-3 justify-between">
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    I3
+                  </div>
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    I4
+                  </div>
+                </div>
+              </div>
+              <div id="j" class="flex justify-between">
+                <div class="flex gap-3 justify-between">
+                  <div class="py-4 px-5">J</div>
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    J1
+                  </div>
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    J2
+                  </div>
+                </div>
+                <div class="flex gap-3 justify-between">
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    J3
+                  </div>
+                  <div class="py-4 btn px-10 bg-[#bebebe] rounded-xl w-28 h-14">
+                    J4
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <!-- Seat plan column-2 -->
@@ -298,7 +393,7 @@
                 <div id="bill-heading" class="heading pb-4 flex justify-between my-2">
                   <p class="font-bold text-base flex-1 text-start text-black">
                     Seat
-                    <span class="bg-[#1DD100] rounded-xl p-1 font-bold text-white">2</span>
+                    <span id="selected-seat" class="bg-[#1DD100] rounded-xl p-1 font-bold text-white">0</span>
                   </p>
                   <p class="font-bold text-base flex-1 text-start text-black">
                     Class
@@ -410,6 +505,7 @@
       </div>
     </div>
   </footer>
+  <script src="assets/js/utility.js"></script>
   <script src="assets/js/functions.js"></script>
 </body>
 
