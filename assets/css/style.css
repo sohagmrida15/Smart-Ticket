@@ -5,3 +5,20 @@
     background-position: center;
     background-size: cover;
 }
+
+#booking{
+    border-top: 2px solid #1DD100;
+}
+
+.destination-row{
+    border-bottom: 1px dashed rgb(190, 190, 190);
+}
+
+.seatPlancol-1{
+    border-right: 3px dashed rgb(190, 190, 190);
+}
+
+#seatStatus{
+    border-top: 2px dashed rgb(190, 190, 190) ;
+    border-bottom: 2px dashed rgb(190, 190, 190) ;
+}
