@@ -1,21 +1,24 @@
-// Function for get and convert text to number
-function getNumberbyId(id) {
-    const text = document.getElementById(id).innerText;
-    const number = parseInt(text);
-    return number;
-}
-
-// Empty array for selected seats
 var selectedSeats = [];
 
 function keyBoardEvent(id) {
     const seatNumber = document.getElementById(id);
     seatNumber.addEventListener('click', function () {
-        // push the selected seats to array
-            if (!selectedSeats.includes(id)) {
-                selectedSeats.push(id);
+        // declare a boolean variable to keep track of the match
+        let match = false;
+        // loop through the selectedSeats array
+        for (seat of selectedSeats) {
+            // compare each seat with the id
+            if (id === seat) {
+                // if they match, set the boolean variable to true and break the loop
+                match = true;
+                break;
             }
-        console.log(selectedSeats);
+        }
+        // check the value of the boolean variable
+        if (!match) {
+            // if it is false, push the id into the selectedSeats array
+            selectedSeats.push(id);
+        }
         // remove and add bg color to selected seat
         const clickedSeat = document.getElementById(id);
         clickedSeat.classList.remove('bg-[#bebebe]');
@@ -26,7 +29,7 @@ function keyBoardEvent(id) {
         let curentRemainingSeat = document.getElementById('total-seat');
         curentRemainingSeat.innerText = presentRemainingSeat;
 
-
+        console.log(selectedSeats);
         const selectedSeatNumber = getNumberbyId('selected-seat');
     });
 }
