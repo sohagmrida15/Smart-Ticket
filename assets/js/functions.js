@@ -1,8 +1,8 @@
 // Click event to scroll into Seat plan
 const buyTicketBtn = document.getElementById('buy-ticket-btn');
-buyTicketBtn.addEventListener('click', function(){
+buyTicketBtn.addEventListener('click', function () {
     const target = document.getElementById('seatPlancol-1');
-    target.scrollIntoView({behavior: "smooth"});
+    target.scrollIntoView({ behavior: "smooth" });
 });
 
 // Function for get and convert text to number
@@ -13,7 +13,7 @@ function getNumberbyId(id) {
 }
 
 // Function for apend seat name
-function apendSeatName(hide, apendContainer, i){
+function apendSeatName(hide, apendContainer, i) {
     const seat = document.getElementById(hide);
     seat.classList.remove('hidden');
     const apend = document.getElementById(apendContainer);
@@ -28,75 +28,114 @@ function keyBoardEvent(id) {
     const seatNumber = document.getElementById(id);
     seatNumber.addEventListener('click', function () {
         if (!selectedSeats.includes(id)) {
-            if(selectedSeats.length < 4) {
-               // push the selected seats to array
-            selectedSeats.push(id);
+            if (selectedSeats.length < 4) {
+                // push the selected seats to array
+                selectedSeats.push(id);
 
-            // remove and add bg color to selected seat
-            const clickedSeat = document.getElementById(id);
-            clickedSeat.classList.remove('bg-[#bebebe]');
-            clickedSeat.classList.add('bg-[#1DD100]');
+                // remove and add bg color to selected seat
+                const clickedSeat = document.getElementById(id);
+                clickedSeat.classList.remove('bg-[#bebebe]');
+                clickedSeat.classList.add('bg-[#1DD100]');
 
-            // decrease from total seat number
-            let remainingSeat = getNumberbyId('total-seat');
-            let presentRemainingSeat = remainingSeat - 1;
-            let curentRemainingSeat = document.getElementById('total-seat');
-            curentRemainingSeat.innerText = presentRemainingSeat;
+                // decrease from total seat number
+                let remainingSeat = getNumberbyId('total-seat');
+                let presentRemainingSeat = remainingSeat - 1;
+                let curentRemainingSeat = document.getElementById('total-seat');
+                curentRemainingSeat.innerText = presentRemainingSeat;
 
-            // increase selected seat number
-            let selectedSeatNumber = getNumberbyId('selected-seat');
-            let presentSeat = selectedSeatNumber + 1;
-            let curentSeatBooked = document.getElementById('selected-seat');
-            curentSeatBooked.innerText = presentSeat; 
+                // increase selected seat number
+                let selectedSeatNumber = getNumberbyId('selected-seat');
+                let presentSeat = selectedSeatNumber + 1;
+                let curentSeatBooked = document.getElementById('selected-seat');
+                curentSeatBooked.innerText = presentSeat;
 
-            // display seat name, update total price and grand total
+                // display seat name, update total price and grand total
 
-            // get total price value
-            let totalPrice = document.getElementById('total-price');
-            let totalPriceText = totalPrice.innerText;
-            let totalPriceNumber = parseFloat(totalPriceText);
-            
-            // Get grand total value
-            let grandTotal = document.getElementById('grand-total');
-            let grandTotalText = grandTotal.innerText;
-            
+                // get total price value
+                let totalPrice = document.getElementById('total-price');
+                let totalPriceText = totalPrice.innerText;
+                let totalPriceNumber = parseFloat(totalPriceText);
 
-            if(selectedSeats.length == 1){
-                apendSeatName('seat-1', 'seat-name-1', 0);
-                totalPriceNumber = totalPriceNumber + 550;
-                totalPrice.innerText = totalPriceNumber;
-                grandTotal.innerText = totalPriceNumber;
-            }
-            if(selectedSeats.length == 2){
-                apendSeatName('seat-2', 'seat-name-2', 1);
-                totalPriceNumber = totalPriceNumber + 550;
-                totalPrice.innerText = totalPriceNumber;
-                grandTotal.innerText = totalPriceNumber;
-            }
-            if(selectedSeats.length == 3){
-                apendSeatName('seat-3', 'seat-name-3', 2);
-                totalPriceNumber = totalPriceNumber + 550;
-                totalPrice.innerText = totalPriceNumber;
-                grandTotal.innerText = totalPriceNumber;
-            }
-            if(selectedSeats.length == 4){
-                apendSeatName('seat-4', 'seat-name-4', 3);
-                totalPriceNumber = totalPriceNumber + 550;
-                totalPrice.innerText = totalPriceNumber;
-                grandTotal.innerText = totalPriceNumber; 
-            }
-            
-            // 
-            
+                // Get grand total value
+                let grandTotal = document.getElementById('grand-total');
 
+
+
+                if (selectedSeats.length == 1) {
+                    apendSeatName('seat-1', 'seat-name-1', 0);
+                    totalPriceNumber = totalPriceNumber + 550;
+                    totalPrice.innerText = totalPriceNumber;
+                    grandTotal.innerText = totalPriceNumber;
+                }
+                if (selectedSeats.length == 2) {
+                    apendSeatName('seat-2', 'seat-name-2', 1);
+                    totalPriceNumber = totalPriceNumber + 550;
+                    totalPrice.innerText = totalPriceNumber;
+                    grandTotal.innerText = totalPriceNumber;
+                }
+                if (selectedSeats.length == 3) {
+                    apendSeatName('seat-3', 'seat-name-3', 2);
+                    totalPriceNumber = totalPriceNumber + 550;
+                    totalPrice.innerText = totalPriceNumber;
+                    grandTotal.innerText = totalPriceNumber;
+                }
+                if (selectedSeats.length == 4) {
+                    apendSeatName('seat-4', 'seat-name-4', 3);
+                    totalPriceNumber = totalPriceNumber + 550;
+                    totalPrice.innerText = totalPriceNumber;
+                    grandTotal.innerText = totalPriceNumber;
+                }
 
             }
-            else{
+            else {
                 alert("You Cannot buy more than Four ticket at a time");
             }
         }
-        
+
     });
+}
+// function for Decrease Cupon Discount from grandtotal
+function applyCupon() {
+    let grandTotal = document.getElementById('grand-total');
+    let grandTotalText = grandTotal.innerText;
+    let grandTotalNumber = parseFloat(grandTotalText);
+
+    const cuponInputText = document.getElementById('cupon');
+    const cuponInputValue = cuponInputText.value;
+    if (cuponInputValue === 'NEW15') {
+        // display Discount
+        const discountContainer = document.getElementById('discount');
+        document.getElementById('discount-div').classList.remove('hidden');
+        const discountNumber = discountContainer.innerText = (grandTotalNumber * 15) / 100;
+        console.log(discountNumber);
+
+        // Update Grand Total
+        document.getElementById('grand-total').innerText = grandTotalNumber - discountNumber;
+
+        // Disable the Cupon Feild
+        document.getElementById('cupon-field').classList.add('hidden');
+    }
+    else if (cuponInputValue === "Couple 20") {
+        // display Discount
+        const discountContainer = document.getElementById('discount');
+        document.getElementById('discount-div').classList.remove('hidden');
+        const discountNumber = discountContainer.innerText = (grandTotalNumber * 20) / 100;
+
+        // Update Grand Total
+        document.getElementById('grand-total').innerText = grandTotalNumber - discountNumber;
+
+        // Disable the Cupon Feild
+        document.getElementById('cupon-field').classList.add('hidden');
+    }
+    else {
+        alert("This is Not a Valid Cupon, Please Try again with Another One");
+    }
+}
+
+
+// Function for Next Button
+function displaySuccess(){
+    
 }
 
 // Function for calling keyboard events
