@@ -50,7 +50,6 @@ function keyBoardEvent(id) {
                 curentSeatBooked.innerText = presentSeat;
 
                 // display seat name, update total price and grand total
-
                 // get total price value
                 let totalPrice = document.getElementById('total-price');
                 let totalPriceText = totalPrice.innerText;
@@ -58,9 +57,6 @@ function keyBoardEvent(id) {
 
                 // Get grand total value
                 let grandTotal = document.getElementById('grand-total');
-
-
-
                 if (selectedSeats.length == 1) {
                     apendSeatName('seat-1', 'seat-name-1', 0);
                     totalPriceNumber = totalPriceNumber + 550;
@@ -138,28 +134,27 @@ function displaySuccess(){
     document.getElementById('next-hide-1').classList.add('hidden');
     document.getElementById('next-hide-2').classList.add('hidden');
     document.getElementById('next-hide-3').classList.add('hidden');
-
     document.getElementById('next-show').classList.remove('hidden');
-
-
-    
-
 }
 
 
 // Function for calling keyboard events
 function callKeyBoardEvents() {
-    const rows = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
-    const cols = ['1', '2', '3', '4'];
-
-    for (const row of rows) {
-        for (const col of cols) {
-            keyBoardEvent(row + col);
+    const alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+    const numbers = ['1', '2', '3', '4'];
+    for (const alphabet of alphabets) {
+        for (const number of numbers) {
+            keyBoardEvent(alphabet + number);
         }
     }
 }
 
 callKeyBoardEvents();
+
+// Function for continue button
+function continueThePage(){
+    location.reload();
+}
 
 
 
