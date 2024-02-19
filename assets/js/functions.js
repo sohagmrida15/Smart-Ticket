@@ -135,8 +135,17 @@ function applyCupon() {
 
 // Function for Next Button
 function displaySuccess(){
+    document.getElementById('next-hide-1').classList.add('hidden');
+    document.getElementById('next-hide-2').classList.add('hidden');
+    document.getElementById('next-hide-3').classList.add('hidden');
+
+    document.getElementById('next-show').classList.remove('hidden');
+
+
     
+
 }
+
 
 // Function for calling keyboard events
 function callKeyBoardEvents() {
